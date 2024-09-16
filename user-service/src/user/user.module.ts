@@ -8,7 +8,10 @@ import {ClientsModule, Transport} from "@nestjs/microservices";
     ClientsModule.register([
       {
         name: 'event-service',
-        transport: Transport.TCP
+        transport: Transport.TCP,
+        options: {
+          port: 3001
+        }
       }
     ]),
   ],

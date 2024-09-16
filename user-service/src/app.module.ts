@@ -7,12 +7,12 @@ import { UserModule } from './user/user.module';
 @Module({
   imports: [
       UserModule,
-      ClientsModule.register([
-        {
-          name: 'event-service',
-          transport: Transport.TCP
-        }
-      ])
+      // ClientsModule.register([
+      //   {
+      //     name: 'event-service',
+      //     transport: Transport.TCP
+      //   }
+      // ])
   ],
   controllers: [AppController],
   providers: [AppService],

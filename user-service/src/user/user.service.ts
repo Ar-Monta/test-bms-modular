@@ -21,11 +21,10 @@ export class UserService {
   }
 
   findOne(id: number) {
-    return 'ok';
-    let events = this.eventClient.send('findAllEventByUser', new FindAllEventByUserEvent(id))
-
-
-    return `user` + events;
+    // return 'ok';
+    const events = this.eventClient.send('findAllEventByUser', new FindAllEventByUserEvent(id));
+// console.log(events);
+    return events;
     // return `This action returns a #${id} user`;
   }
 
